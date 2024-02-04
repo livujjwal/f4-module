@@ -11,9 +11,7 @@ const DetailPage = () => {
   const itemList = useSelector((store) => store.item.itemList);
   const postId = useParams();
   const postInfo = itemList.filter((item) => item.id == postId.id);
-  console.log(postInfo);
   const { userId, id, title, body } = postInfo[0];
-  console.log(userId, id, title, body);
   return (
     <div className="flex flex-col items-center w-full bg-[#f4f4f4]">
       <div className="flex flex-col  w-full h-[28rem] p-8">
